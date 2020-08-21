@@ -19,14 +19,8 @@ app.set('view engine', 'hbs')
 app.use(express.static('public'))
 app.use('/peer', peerServer)
 
-/**
- * base redirect
- */
-app.get('/', (req, res) => {
-  res.render('index')
-})
 
-app.get('/room', (req, res) => {
+app.get('/', (req, res) => {
   res.redirect(`/room/${uuidv4()}`)
 })
 /**

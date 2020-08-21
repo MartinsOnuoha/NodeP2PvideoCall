@@ -1,6 +1,6 @@
 const app = document.getElementById('video-space')
 const userVideo = document.createElement('video')
-const socket = io('ws://localhost:3001');
+const socket = io('/');
 const participants = []
 let myVideoStream = null
 
